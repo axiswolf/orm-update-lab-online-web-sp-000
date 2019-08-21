@@ -31,7 +31,7 @@ class Student
 
   def save
     # saves an instance of the Student class to the database and then sets the given students 'id' attribute
-    if save.id
+    if self.id
       self.update
     else
       sql = <<-SQL
