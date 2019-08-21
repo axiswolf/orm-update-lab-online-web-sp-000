@@ -43,7 +43,7 @@ class Student
   #   end
   # end
 
-  def self.create(name, grade)
+  def self.create(name:, grade:)
     # creates a student with two attributes, name, and grade and saves it into the student's table.
     student = Student.new(name, grade)
     student.save
@@ -72,7 +72,7 @@ class Student
   end
 
   def update
-    sql = "UPDATE songs SET name = ?, grade = ? WHERE id = ?"
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
 
