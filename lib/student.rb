@@ -50,7 +50,7 @@ class Student
     student
   end
 
-  def self.new_from_db
+  def self.new_from_db(row)
     # creates an instance with corresponding attribute values
     new_student = self.new
     new_student.id = row[0]
